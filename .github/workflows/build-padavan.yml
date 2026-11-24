@@ -1,4 +1,4 @@
-名称：构建 Padavan IVM60:           bash build.sh
+name: Build Padavan IVM60
 
 on:
   push:
@@ -7,7 +7,6 @@ on:
 
 env:
   TNAME: ivm60
-  # 改成你自己fork的rt-n56u仓库
   GITHUB_REPO: ji565893340-ctrl/rt-n56u
   BRANCH: master
 
@@ -20,4 +19,3 @@ jobs:
       - name: Build Padavan
         run: |
           bash build.sh
-
