@@ -1,0 +1,21 @@
+name: Build Padavan IVM60
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+env:
+  TNAME: ivm60
+  GITHUB_REPO: chongshengB/rt-n56u
+  BRANCH: master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Build Padavan
+        run: |
+          bash build.sh
